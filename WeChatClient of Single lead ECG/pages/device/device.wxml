@@ -1,0 +1,27 @@
+<view class="container">
+  <text class="headtext">心电测量</text>
+  <text style="font-size:x-small;color:gray">状态：{{connected?"已连接":"已断开"}}</text>
+  <text style="font-size:medium;word-break:break-all">设备名称：{{name}}</text>
+  <view class="ULPbox">
+    <text class="ULPtext">{{ULP?"导联":"断开"}}</text>
+    <view class="littlePoint" style="background-color:{{ULP_LP}}"></view>
+  </view>
+  <view class="ECGbox">
+    <canvas type="2d" id="ECGbackground" binderror=""></canvas>
+    <canvas type="2d" id="ECGshow" binderror=""></canvas>
+  </view>
+  <view class="RRbox">
+    <text class="RRtext">心率：</text>
+    <text class="RRnum">{{HR}}</text>
+  </view>
+  <button class="Ctrlbtn" type="primary" bindtap="onStart">{{showing?"停止":"开始"}}</button>
+
+  <view class="debugbox">
+    <text style="font-size:medium;margin-top:10px">接收内容：</text>
+    <textarea class="res" maxlength="-1" disabled value="{{receiveText}}" />
+
+    <text style="font-size:medium;margin-top:10px">发送内容：</text>
+    <input class="input" value="{{inputText}}" bindinput="bindInput" maxlength="24" />
+    <button type="primary" class="button" bindtap="Send">发送</button>
+  </view>
+</view>

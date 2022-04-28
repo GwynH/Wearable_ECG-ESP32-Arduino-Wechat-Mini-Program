@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/search/search",
+    "pages/device/device",
+    "pages/ECGview/ECGview"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#f8f8f8",
+    "navigationBarTitleText": "BLE Demo",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#E9E9E9"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
